@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+   
+
+    <script src="https://www.gstatic.com/firebasejs/5.7.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.7.2/firebase-firestore.js"></script>
+
+
+    
+    <title>Register</title>
+
+    
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Font Awesome icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Custom CSS -->
+     <link href="css/style.css" rel="stylesheet">
+</head>
+<body>
+
+
+ <!--  Navbar  -->
+ <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #e3f2fd00;">
+        <a class="navbar-brand"></a>
+        
+                            </a>
+
+
+        </form>
+      </nav>
+
+
+     <!-- Register Form -->
+    <div class="content">
+        <form id= "todolist-form">
+
+            <div class="col">
+                <input type="text" name="name" class="form-control" placeholder="First name">
+              </div>
+              <br>
+              <div class="col">
+                <input type="text" name="surname" class="form-control" placeholder="Last name">
+              </div>
+<br>
+
+            
+              <div class="col">
+                <input type="email" name="email" class="form-control" id="inputEmail4" placeholder="Email">
+              </div>
+              <br>
+              <div class="col">
+                <input type="password" name="password" class="form-control" id="inputPassword4" placeholder="Password">
+              </div>
+            <br>
+
+            <div class="col">
+            <button class="btn btn-warning" type="submit">Save</button>
+            
+            <a href="register-index.html" class="btn btn-warning" role="button" aria-pressed="true">Cancel</a>
+            </div>
+        </form>
+    </div>
+
+
+
+    <script>
+        // Initialize Firebase
+        var config = {
+          apiKey: "AIzaSyAgjTun0xtCqb5IriHpUcz-ZUKynhVRcXs",
+          authDomain: "to-do-list-be488.firebaseapp.com",
+          databaseURL: "https://to-do-list-be488.firebaseio.com",
+          projectId: "to-do-list-be488",
+          storageBucket: "to-do-list-be488.appspot.com",
+          messagingSenderId: "179380377778"
+        };
+        firebase.initializeApp(config);
+        const db=firebase.firestore();
+        db.settings({timestampsInSnapshots:true});
+      </script>
+      
+      <script src="js/app.js"></script>
+
+</body>
+</html>
